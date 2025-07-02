@@ -1,19 +1,20 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Elyssa McMaster</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
- 
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
   <style>
     body {
       margin: 0;
       padding: 0;
-      background-color: #f9f7f5; /* warm off-white background */
+      background-color: #f9f7f5; /* warm off-white */
       font-family: 'Century Gothic', sans-serif;
-      color: #2c2c2c; /* deep espresso text */
+      color: #2c2c2c; /* deep espresso */
     }
     header {
       background-color: #6a8d73; /* sage green */
@@ -21,14 +22,17 @@
       padding: 20px;
       text-align: center;
     }
-    .linkedin-icon {
+    .linkedin-icon,
+    .github-icon {
       color: white;
       font-size: 28px;
       text-decoration: none;
+      margin-left: 10px;
       transition: color 0.3s;
     }
-    .linkedin-icon:hover {
-      color: #b9808f; /* soft rosewood on hover */
+    .linkedin-icon:hover,
+    .github-icon:hover {
+      color: #cfa5b0; /* lighter rosewood hover */
     }
     nav {
       margin-top: 10px;
@@ -42,7 +46,7 @@
       transition: color 0.3s;
     }
     nav a:hover {
-      color: #b9808f; /* rosewood hover */
+      color: #cfa5b0; /* lighter rosewood hover */
     }
     section {
       max-width: 900px;
@@ -50,15 +54,20 @@
       background: white;
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
     }
     h2 {
-      color: #6a8d73; /* sage green section headers */
+      color: #6a8d73;
       border-bottom: 2px solid #6a8d73;
       padding-bottom: 5px;
     }
     p {
       line-height: 1.6;
+    }
+    ul, li {
+      margin: 0;
+      padding: 0;
+      list-style-position: inside;
     }
     .project {
       display: flex;
@@ -71,7 +80,7 @@
       height: auto;
       border-radius: 8px;
       object-fit: cover;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
     }
     .project-text {
       flex: 1;
@@ -94,82 +103,111 @@
     }
   </style>
 </head>
-
 <body>
 
-<header>
-  <h1>Elyssa McMaster</h1>
-  <p>elyssa.m.mcmaster@vanderbilt.edu 
-    <a class="linkedin-icon" href="https://www.linkedin.com/in/elyssa-mcmaster-959696206/" target="_blank" rel="noopener noreferrer">
-      <i class="fab fa-linkedin"></i>
-    <a href="https://github.com/elyssamcmaster" target="_blank" rel="noopener noreferrer"> 
-            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="20" height="20"> 
-    </a>
-  </p>
-</header>
+  <header>
+    <h1>Elyssa McMaster</h1>
+    <p>
+      elyssa.m.mcmaster@vanderbilt.edu
+      <a
+        class="linkedin-icon"
+        href="https://www.linkedin.com/in/elyssa-mcmaster-959696206/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a
+        class="github-icon"
+        href="https://github.com/elyssamcmaster"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fab fa-github"></i>
+      </a>
+    </p>
+  </header>
 
-<nav>
-  <a href="#about">About Me</a>
-  <a href="#projects">Projects</a>
-  <a href="#publications">Publications</a>
-  <a href="#hobbies">Hobbies</a>
-</nav>
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#publications">Publications</a>
+    <a href="#hobbies">Hobbies</a>
+  </nav>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>Hello! I'm Elyssa, a PhD student in electrical and computer engineering at Vanderbilt University. My research focuses on advanced image analysis methods and machine learning tools for complex biomedical data, with applications in brain structure and disease. </p>
-</section>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Hello! I'm Elyssa, a PhD student in electrical and computer engineering
+      at Vanderbilt University. My research focuses on advanced image analysis
+      methods and machine learning tools for complex biomedical data, with
+      applications in brain structure and disease.
+    </p>
+  </section>
 
+  <section id="publications">
+    <h2>Publications</h2>
+    <ul>
+      <li>
+        "A technical assessment of latent diffusion for Alzheimer's Disease
+        progression." <i>Proc. SPIE 13406, Medical Imaging: Image Processing</i>
+      </li>
+      <li>
+        "Harmonized connectome resampling for variance in voxel sizes."
+        <i>Magnetic Resonance Imaging</i>,
+        <a href="https://doi.org/10.1016/j.mri.2025.1104024" target="_blank"
+          >DOI</a
+        >
+      </li>
+    </ul>
+  </section>
 
+  <section id="projects">
+    <h2>Projects, Short Papers, and Abstracts</h2>
 
-<section id="publications">
-  <h2>Publications</h2>
-
-  <div class="project">
-    <div class="project-text">
-    <li>"A technical assessment of latent diffusion for Alzheimer's Disease progression." <i>Proc. SPIE 13406, Medical Imaging: Image Processing</i>
-    <li>"Harmonized connectome resampling for variance in voxel sizes". <i>Magnetic Resonance Imaging</i>, <a href="doi: 10.1016/j.mri.2025.1104024">DOI</a></li>
-    
+    <div class="project">
+      <img src="Image1.jpg" alt="Project 1" />
+      <div class="project-text">
+        <h3>Beyond FA</h3>
+        <p>
+          I serve as lead organizer on Beyond FA, an international grand
+          challenge with 17 other organizers and 50+ registered participants.
+          We aim to identify Alzheimer's Disease imaging biomarkers and compare
+          them in a common framework. I communicate directly with participants,
+          curate the dataset, and demonstrate public versions of our baseline
+          methods and testing code. The challenge will remain open until July
+          2025!
+        </p>
+      </div>
     </div>
-  </div>
 
-<section id="projects">
-  <h2>Projects, Short Papers, and Abstracts</h2>
-
-  <div class="project">
-    <img src="Image1.jpg" alt="Project 1">
-    <div class="project-text">
-      <h3>Beyond FA</h3>
-      <p>I serve as lead organizer on Beyond FA, an international grand challenge with 17 other organizers and 50+ registered participants. We aim to identify Alzheimer's Disease imaging biomarkers and compare them in a common framework. I communicate directly with participants, advertise, curate the dataset, and demonstrate public versions of our baseline methods and testing code. The challenge will remain open until July 2025!</p>
+    <div class="project">
+      <img src="Image1.jpg" alt="Project 2" />
+      <div class="project-text">
+        <h3>BrainHack Vandy 2025: OpenDIVE</h3>
+        <p>
+          I co-led this project to streamline tractography visualization and
+          generate colormaps accessible to colorblind populations.
+        </p>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <div class="project">
-    <img src="Image1.jpg" alt="Project 2">
-    <div class="project-text">
-      <h3>BrainHack Vandy 2025: OpenDIVE</h3>
-      <p>I co-led this project to streamline tractography visualization and generate colormaps accessible to colorblind populations.</p>
-    </div>
-  </div>
-</section>
+  <section id="hobbies">
+    <h2>Hobbies</h2>
+    <p>Outside of work, you can find me:</p>
+    <ul>
+      <li>Working on my next crochet or cross stitch project</li>
+      <li>Trying to find the best iced coffee in Nashville</li>
+      <li>Enjoying live music</li>
+    </ul>
+  </section>
 
-
-
-
-
-<section id="hobbies">
-  <h2>Hobbies</h2>
-  <p>Outside of work, you can find me:</p>
-  <ul>
-    <li>Working on my next crochet or cross stitch project</li>
-    <li>Trying to find the best iced coffee in Nashville</li>
-    <li>Enjoying live music</li>
-  </ul>
-</section>
-
-<footer>
-  &copy; 2025 Elyssa McMaster. All Rights Reserved.
-</footer>
+  <footer>
+    &copy; 2025 Elyssa McMaster. All Rights Reserved.
+  </footer>
 
 </body>
 </html>
+
+
