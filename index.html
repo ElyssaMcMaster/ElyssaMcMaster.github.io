@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Elyssa McMaster</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -57,7 +58,7 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
     h2 {
-      color: #6a8d73; /* sage green */
+      color: #6a8d73;
       border-bottom: 2px solid #6a8d73;
       padding-bottom: 5px;
     }
@@ -84,6 +85,27 @@
     .project-text {
       flex: 1;
     }
+
+    .about-content {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .about-photo {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
     footer {
       text-align: center;
       padding: 15px;
@@ -91,6 +113,7 @@
       color: #777;
       font-size: 0.9em;
     }
+
     @media (max-width: 600px) {
       .project {
         flex-direction: column;
@@ -98,6 +121,10 @@
       }
       .project img {
         width: 100%;
+      }
+      .about-content {
+        flex-direction: column;
+        align-items: center;
       }
     }
   </style>
@@ -136,13 +163,17 @@
 
   <section id="about">
     <h2>About Me</h2>
-    
-    <p>
-      Hello! I'm Elyssa, a PhD student in electrical and computer engineering
-      at Vanderbilt University. My research focuses on advanced image analysis
-      methods and machine learning tools for complex biomedical data, with
-      applications in brain structure and disease.
-    </p>
+    <div class="about-content">
+      <img src="IMG_0609.jpeg" alt="Elyssa McMaster" class="about-photo" />
+      <div class="about-text">
+        <p>
+          Hello! I'm Elyssa, a PhD student in electrical and computer engineering
+          at Vanderbilt University. My research focuses on advanced image analysis
+          methods and machine learning tools for complex biomedical data, with
+          applications in brain structure and disease.
+        </p>
+      </div>
+    </div>
   </section>
 
   <section id="publications">
@@ -190,8 +221,7 @@
             href="https://openreview.net/forum?id=KZXJDxQegd&noteId=KZXJDxQegd"
             target="_blank"
             rel="noopener noreferrer"
-            >MIDL short paper</a
-          >
+          >MIDL short paper</a>
         </p>
       </div>
     </div>
@@ -208,20 +238,17 @@
             href="https://openreview.net/forum?id=EjqP4vHnHL#discussion"
             target="_blank"
             rel="noopener noreferrer"
-            >MIDL short paper</a
-          >
+          >MIDL short paper</a>
         </p>
       </div>
     </div>
 
-        <div class="project">
-     <img src="ismrm.png" alt="ISMRM 2025 Abstract" />
+    <div class="project">
+      <img src="ismrm.png" alt="ISMRM 2025 Abstract" />
       <div class="project-text">
-        <h3>ISMRM 2025 Abstract: Tractography based white matter tract segmentation is robust to anisotropic resolutions</h3>
+        <h3>ISMRM 2025 Abstract: Tractography-based white matter tract segmentation is robust to anisotropic resolutions</h3>
         <p>
           We show that some algorithms, when paired with well-defined beginning and endpoints for major pathways, show stability in highly anisotropic data.
-        </p><p>
-
         </p>
       </div>
     </div>
@@ -243,3 +270,4 @@
 
 </body>
 </html>
+
