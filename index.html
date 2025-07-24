@@ -23,6 +23,20 @@
       padding: 20px;
       text-align: center;
     }
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .site-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: #fffbea;
+      padding: 5px;
+    }
     .linkedin-icon,
     .github-icon {
       color: white;
@@ -132,7 +146,10 @@
 <body>
 
   <header>
-    <h1>Elyssa McMaster</h1>
+    <div class="header-content">
+      <img src="apple-touch-icon.png" alt="Site icon" class="site-icon" />
+      <h1 style="margin: 0;">Elyssa McMaster</h1>
+    </div>
     <p>
       elyssa.m.mcmaster@vanderbilt.edu
       <a
@@ -270,4 +287,3 @@
 
 </body>
 </html>
-
