@@ -137,75 +137,70 @@
         flex-direction: column;
         align-items: center;
       }
-      /* Gallery grid */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 15px;
-}
+    }
 
-.gallery-item {
-  text-align: center;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}
-
-.gallery-item img:hover {
-  transform: scale(1.05);
-}
-
-.caption {
-  margin-top: 5px;
-  font-size: 0.9em;
-  color: #555;
-}
-
-/* Lightbox styles */
-.lightbox {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  padding-top: 60px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background: rgba(0,0,0,0.9);
-}
-
-.lightbox-content {
-  margin: auto;
-  display: block;
-  max-width: 80%;
-  max-height: 80%;
-}
-
-#lightboxCaption {
-  margin: 15px auto;
-  text-align: center;
-  color: #f1f1f1;
-  font-size: 1em;
-}
-
-.close {
-  position: absolute;
-  top: 30px;
-  right: 45px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
+    /* === Gallery Styles === */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+    .gallery-item {
+      text-align: center;
+    }
+    .gallery-item img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      display: block;
+      margin: 0 auto;
+    }
+    .gallery-item img:hover {
+      transform: scale(1.05);
+    }
+    .caption {
+      margin-top: 5px;
+      font-size: 0.9em;
+      color: #555;
+    }
+    /* Lightbox styles */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background: rgba(0,0,0,0.9);
+    }
+    .lightbox-content {
+      margin: auto;
+      display: block;
+      max-width: 80%;
+      max-height: 80%;
+    }
+    #lightboxCaption {
+      margin: 15px auto;
+      text-align: center;
+      color: #f1f1f1;
+      font-size: 1em;
+    }
+    .close {
+      position: absolute;
+      top: 30px;
+      right: 45px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -218,28 +213,13 @@
     </div>
     <p>
       elyssa.m.mcmaster@vanderbilt.edu
-      <a
-        class="linkedin-icon"
-        href="https://www.linkedin.com/in/elyssa-mcmaster-959696206/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a class="linkedin-icon" href="https://www.linkedin.com/in/elyssa-mcmaster-959696206/" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-linkedin"></i>
       </a>
-      <a
-        class="github-icon"
-        href="https://github.com/elyssamcmaster"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a class="github-icon" href="https://github.com/elyssamcmaster" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-github"></i>
       </a>
-      <a
-        class="scholar-icon"
-        href="https://scholar.google.com/citations?user=clsolRwAAAAJ&hl=en"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a class="scholar-icon" href="https://scholar.google.com/citations?user=clsolRwAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
         <i class="fas fa-graduation-cap"></i>
       </a>
     </p>
@@ -250,6 +230,7 @@
     <a href="#projects">Projects</a>
     <a href="#publications">Publications</a>
     <a href="#hobbies">Hobbies</a>
+    <a href="#gallery">Gallery</a>
   </nav>
 
   <section id="about">
@@ -273,105 +254,47 @@
       <li>
         "A technical assessment of latent diffusion for Alzheimer's Disease
         progression." <i>Proc. SPIE 13406, Medical Imaging: Image Processing,</i>
-        <a
-          href="https://doi.org/10.1117/12.3047135"
-          target="_blank"
-          rel="noopener noreferrer"
-        >DOI</a>
+        <a href="https://doi.org/10.1117/12.3047135" target="_blank" rel="noopener noreferrer">DOI</a>
       </li>
       <li>
         "Harmonized connectome resampling for variance in voxel sizes."
         <i>Magnetic Resonance Imaging,</i>
-        <a
-          href="https://doi.org/10.1016/j.mri.2025.110424"
-          target="_blank"
-          rel="noopener noreferrer"
-        >DOI</a>
+        <a href="https://doi.org/10.1016/j.mri.2025.110424" target="_blank" rel="noopener noreferrer">DOI</a>
       </li>
     </ul>
   </section>
 
-<section id="projects">
-  <h2>Projects, Short Papers, and Abstracts</h2>
-
-  <div class="project">
-    <img src="aisummerschool.png" alt="AI Summer School 2025" />
-    <div class="project-text">
-      <h3>VALIANT AI Summer School 2025 Coaching</h3>
-      <p>
-        I coached multiple sessions at the annual AI Summer School, including a demo to acquire your own Spotify data to analyze your listening habits. Make a copy and try it out!
-      </p>
-      <p>
-        <a
-          href="https://colab.research.google.com/drive/1jTR-JT6JwgGdnOMwJQgDWGWVPDim0qmM#scrollTo=ZXUtH4YU-56w"
-          target="_blank"
-          rel="noopener noreferrer"
-        >Link to demo</a>
-      </p>
+  <section id="projects">
+    <h2>Projects, Short Papers, and Abstracts</h2>
+    <div class="project">
+      <img src="aisummerschool.png" alt="AI Summer School 2025" />
+      <div class="project-text">
+        <h3>VALIANT AI Summer School 2025 Coaching</h3>
+        <p>I coached multiple sessions at the annual AI Summer School, including a demo to acquire your own Spotify data to analyze your listening habits. Make a copy and try it out!</p>
+        <p><a href="https://colab.research.google.com/drive/1jTR-JT6JwgGdnOMwJQgDWGWVPDim0qmM#scrollTo=ZXUtH4YU-56w" target="_blank" rel="noopener noreferrer">Link to demo</a></p>
+      </div>
     </div>
-  </div>
-
-
     <div class="project">
       <img src="4.png" alt="Beyond FA project" />
       <div class="project-text">
         <h3>Beyond FA</h3>
-        <p>
-          I serve as lead organizer on Beyond FA, an international grand
-          challenge with 17 other organizers and 50+ registered participants.
-          We aim to identify Alzheimer's Disease imaging biomarkers and compare
-          them in a common framework. I communicate directly with participants,
-          curate the dataset, and demonstrate public versions of our baseline
-          methods and testing code. 
-        </p>
-        <p>
-          <a
-            href="https://openreview.net/forum?id=KZXJDxQegd&noteId=KZXJDxQegd"
-            target="_blank"
-            rel="noopener noreferrer"
-          >MIDL short paper</a>
-        </p>
+        <p>I serve as lead organizer on Beyond FA, an international grand challenge with 17 other organizers and 50+ registered participants...</p>
       </div>
     </div>
-
     <div class="project">
       <img src="opendive_v1.png" alt="OpenDIVE project" />
       <div class="project-text">
         <h3>BrainHack Vandy 2025: OpenDIVE</h3>
-        <p>
-          I co-led this project to streamline tractography visualization and
-          generate colormaps accessible to colorblind populations.
-        </p><p>
-          <a
-            href="https://openreview.net/forum?id=EjqP4vHnHL#discussion"
-            target="_blank"
-            rel="noopener noreferrer"
-          >MIDL short paper</a>
-        </p>
+        <p>I co-led this project to streamline tractography visualization and generate colormaps accessible to colorblind populations.</p>
       </div>
     </div>
-
     <div class="project">
       <img src="ismrm.png" alt="ISMRM 2025 Abstract" />
       <div class="project-text">
-        <h3>ISMRM 2025 Abstract: Tractography-based white matter tract segmentation is robust to anisotropic resolutions</h3>
-        <p>
-          We show that some algorithms, when paired with well-defined beginning and endpoints for major pathways, show stability in highly anisotropic data.
-        </p>
-        <p>
-          <a
-            href="https://archive.ismrm.org/2025/1426.html"
-            target="_blank"
-            rel="noopener norefferrer"
-            
-            >ISMRM abstract</a>
-        </p>
+        <h3>ISMRM 2025 Abstract</h3>
+        <p>We show that some algorithms, when paired with well-defined beginning and endpoints for major pathways, show stability in highly anisotropic data.</p>
       </div>
     </div>
-
-
-
-        
   </section>
 
   <section id="hobbies">
@@ -384,65 +307,49 @@
     </ul>
   </section>
 
+  <!-- === Gallery Section === -->
+  <section id="gallery">
+    <h2>Photo Gallery</h2>
+    <div class="gallery">
+      <div class="gallery-item"><img src="IMG_8514.jpeg" alt="Caption for IMG_8514" onclick="openModal(this)" /><p class="caption">Caption for IMG_8514</p></div>
+      <div class="gallery-item"><img src="IMG_7942.jpeg" alt="Caption for IMG_7942" onclick="openModal(this)" /><p class="caption">Caption for IMG_7942</p></div>
+      <div class="gallery-item"><img src="603337B9-E100-439B-8D44-C91DDB5BE7E9.jpeg" alt="Caption for 603337B9" onclick="openModal(this)" /><p class="caption">Caption for 603337B9</p></div>
+      <div class="gallery-item"><img src="IMG_7654.jpeg" alt="Caption for IMG_7654" onclick="openModal(this)" /><p class="caption">Caption for IMG_7654</p></div>
+      <div class="gallery-item"><img src="IMG_5737.jpeg" alt="Caption for IMG_5737" onclick="openModal(this)" /><p class="caption">Caption for IMG_5737</p></div>
+      <div class="gallery-item"><img src="IMG_6102.jpeg" alt="Caption for IMG_6102" onclick="openModal(this)" /><p class="caption">Caption for IMG_6102</p></div>
+      <div class="gallery-item"><img src="IMG_5455.jpeg" alt="Caption for IMG_5455" onclick="openModal(this)" /><p class="caption">Caption for IMG_5455</p></div>
+      <div class="gallery-item"><img src="DSC_0269_1_Original.jpeg" alt="Caption for DSC_0269" onclick="openModal(this)" /><p class="caption">Caption for DSC_0269</p></div>
+      <div class="gallery-item"><img src="IMG_6715.jpeg" alt="Caption for IMG_6715" onclick="openModal(this)" /><p class="caption">Caption for IMG_6715</p></div>
+      <div class="gallery-item"><img src="IMG_4464.jpeg" alt="Caption for IMG_4464" onclick="openModal(this)" /><p class="caption">Caption for IMG_4464</p></div>
+      <div class="gallery-item"><img src="IMG_3975.jpeg" alt="Caption for IMG_3975" onclick="openModal(this)" /><p class="caption">Caption for IMG_3975</p></div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div id="lightboxModal" class="lightbox">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="lightbox-content" id="lightboxImg">
+    <div id="lightboxCaption"></div>
+  </div>
+
   <footer>
     &copy; 2025 Elyssa McMaster. All Rights Reserved.
   </footer>
-<section id="gallery">
-  <h2>Photo Gallery</h2>
-  <div class="gallery">
-    <div class="gallery-item">
-      <img src="IMG_8514.jpeg" alt="Caption for IMG_8514" onclick="openModal(this)" />
-      <p class="caption">Caption for IMG_8514</p>
-    </div>
-    <div class="gallery-item">
-      <img src="IMG_7942.jpeg" alt="Caption for IMG_7942" onclick="openModal(this)" />
-      <p class="caption">Caption for IMG_7942</p>
-    </div>
-    <div class="gallery-item">
-      <img src="603337B9-E100-439B-8D44-C91DDB5BE7E9.jpeg" alt="Caption for 603337B9" onclick="openModal(this)" />
-      <p class="caption">Caption for 603337B9</p>
-    </div>
-    <div class="gallery-item">
-      <img src="IMG_7654.jpeg" alt="Caption for IMG_7654" onclick="openModal(this)" />
-      <p class="caption">Caption for IMG_7654</p>
-    </div>
-    <div class="gallery-item">
-      <img src="IMG_5737.jpeg" alt="Caption for IMG_5737" onclick="openModal(this)" />
-      <p class="caption">Caption for IMG_5737</p>
-    </div>
-    <div class="gallery-item">
-      <img src="IMG_6102.jpeg" alt="Caption for IMG_6102" onclick="openModal(this)" />
-      <p class="caption">Caption for IMG_6102</p>
-    </div>
-    <div class="gallery-item">
-      <img src="IMG_5455.jpeg" alt="Caption for IMG_5455" onclick="openModal(this)" />
-      <p class="caption">Caption for IMG_5455</p>
-    </div>
-    <div class="gallery-item">
-      <img src="DSC_0269_1_Original.jpeg" alt="Caption for DSC_0269" onclick="openModal(this)" />
-      <p class="caption">Caption for DSC_0269</p>
-    </div>
-    <div class="gallery-item">
-      <img src="IMG_6715.jpeg" alt="Caption for IMG_6715" onclick="openModal(this)" />
-      <p class="caption">Caption for IMG_6715</p>
-    </div>
-    <div class="gallery-item">
-      <img src="IMG_4464.jpeg" alt="Caption for IMG_4464" onclick="openModal(this)" />
-      <p class="caption">Caption for IMG_4464</p>
-    </div>
-    <div class="gallery-item">
-      <img src="IMG_3975.jpeg" alt="Caption for IMG_3975" onclick="openModal(this)" />
-      <p class="caption">Caption for IMG_3975</p>
-    </div>
-  </div>
-</section>
 
-<!-- Lightbox Modal -->
-<div id="lightboxModal" class="lightbox">
-  <span class="close" onclick="closeModal()">&times;</span>
-  <img class="lightbox-content" id="lightboxImg">
-  <div id="lightboxCaption"></div>
-</div>
+  <script>
+    function openModal(imgElement) {
+      var modal = document.getElementById("lightboxModal");
+      var modalImg = document.getElementById("lightboxImg");
+      var captionText = document.getElementById("lightboxCaption");
+
+      modal.style.display = "block";
+      modalImg.src = imgElement.src;
+      captionText.innerHTML = imgElement.alt;
+    }
+    function closeModal() {
+      document.getElementById("lightboxModal").style.display = "none";
+    }
+  </script>
 
 </body>
 </html>
