@@ -147,27 +147,41 @@
       justify-content: center;
     }
     .gallery-item {
-      text-align: center;
-    }
-    .gallery-item img {
+      position: relative;
       width: 150px;
       height: 150px;
-      object-fit: cover;
+      overflow: hidden;
       border-radius: 8px;
       cursor: pointer;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       transition: transform 0.3s;
       display: block;
-      margin: 0 auto;
     }
-    .gallery-item img:hover {
+    .gallery-item:hover img {
       transform: scale(1.05);
     }
-    .caption {
-      margin-top: 5px;
-      font-size: 0.9em;
-      color: #555;
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      text-align: center;
+      padding: 5px;
+      font-size: 0.85em;
+      opacity: 0;
+      transition: opacity 0.3s;
     }
+    .gallery-item:hover .overlay {
+      opacity: 1;
+    }
+
     /* Lightbox styles */
     .lightbox {
       display: none;
@@ -213,15 +227,9 @@
     </div>
     <p>
       elyssa.m.mcmaster@vanderbilt.edu
-      <a class="linkedin-icon" href="https://www.linkedin.com/in/elyssa-mcmaster-959696206/" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a class="github-icon" href="https://github.com/elyssamcmaster" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-github"></i>
-      </a>
-      <a class="scholar-icon" href="https://scholar.google.com/citations?user=clsolRwAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
-        <i class="fas fa-graduation-cap"></i>
-      </a>
+      <a class="linkedin-icon" href="https://www.linkedin.com/in/elyssa-mcmaster-959696206/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+      <a class="github-icon" href="https://github.com/elyssamcmaster" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+      <a class="scholar-icon" href="https://scholar.google.com/citations?user=clsolRwAAAAJ&hl=en" target="_blank" rel="noopener noreferrer"><i class="fas fa-graduation-cap"></i></a>
     </p>
   </header>
 
@@ -238,12 +246,10 @@
     <div class="about-content">
       <img src="IMG_0609.jpeg" alt="Elyssa McMaster" class="about-photo" />
       <div class="about-text">
-        <p>
-          Hello! I'm Elyssa, a PhD student in electrical and computer engineering
-          at Vanderbilt University. My research focuses on advanced image analysis
-          methods and machine learning tools for complex biomedical data, with
-          applications in brain structure and disease.
-        </p>
+        <p>Hello! I'm Elyssa, a PhD student in electrical and computer engineering
+        at Vanderbilt University. My research focuses on advanced image analysis
+        methods and machine learning tools for complex biomedical data, with
+        applications in brain structure and disease.</p>
       </div>
     </div>
   </section>
@@ -251,13 +257,10 @@
   <section id="publications">
     <h2>Publications</h2>
     <ul>
-      <li>
-        "A technical assessment of latent diffusion for Alzheimer's Disease
-        progression." <i>Proc. SPIE 13406, Medical Imaging: Image Processing,</i>
+      <li>"A technical assessment of latent diffusion for Alzheimer's Disease progression." <i>Proc. SPIE 13406, Medical Imaging: Image Processing,</i>
         <a href="https://doi.org/10.1117/12.3047135" target="_blank" rel="noopener noreferrer">DOI</a>
       </li>
-      <li>
-        "Harmonized connectome resampling for variance in voxel sizes."
+      <li>"Harmonized connectome resampling for variance in voxel sizes."
         <i>Magnetic Resonance Imaging,</i>
         <a href="https://doi.org/10.1016/j.mri.2025.110424" target="_blank" rel="noopener noreferrer">DOI</a>
       </li>
@@ -270,29 +273,7 @@
       <img src="aisummerschool.png" alt="AI Summer School 2025" />
       <div class="project-text">
         <h3>VALIANT AI Summer School 2025 Coaching</h3>
-        <p>I coached multiple sessions at the annual AI Summer School, including a demo to acquire your own Spotify data to analyze your listening habits. Make a copy and try it out!</p>
-        <p><a href="https://colab.research.google.com/drive/1jTR-JT6JwgGdnOMwJQgDWGWVPDim0qmM#scrollTo=ZXUtH4YU-56w" target="_blank" rel="noopener noreferrer">Link to demo</a></p>
-      </div>
-    </div>
-    <div class="project">
-      <img src="4.png" alt="Beyond FA project" />
-      <div class="project-text">
-        <h3>Beyond FA</h3>
-        <p>I serve as lead organizer on Beyond FA, an international grand challenge with 17 other organizers and 50+ registered participants...</p>
-      </div>
-    </div>
-    <div class="project">
-      <img src="opendive_v1.png" alt="OpenDIVE project" />
-      <div class="project-text">
-        <h3>BrainHack Vandy 2025: OpenDIVE</h3>
-        <p>I co-led this project to streamline tractography visualization and generate colormaps accessible to colorblind populations.</p>
-      </div>
-    </div>
-    <div class="project">
-      <img src="ismrm.png" alt="ISMRM 2025 Abstract" />
-      <div class="project-text">
-        <h3>ISMRM 2025 Abstract</h3>
-        <p>We show that some algorithms, when paired with well-defined beginning and endpoints for major pathways, show stability in highly anisotropic data.</p>
+        <p>I coached multiple sessions at the annual AI Summer School...</p>
       </div>
     </div>
   </section>
@@ -311,17 +292,17 @@
   <section id="gallery">
     <h2>Photo Gallery</h2>
     <div class="gallery">
-      <div class="gallery-item"><img src="IMG_8514.jpeg" alt="Caption for IMG_8514" onclick="openModal(this)" /><p class="caption">Caption for IMG_8514</p></div>
-      <div class="gallery-item"><img src="IMG_7942.jpeg" alt="Caption for IMG_7942" onclick="openModal(this)" /><p class="caption">Caption for IMG_7942</p></div>
-      <div class="gallery-item"><img src="603337B9-E100-439B-8D44-C91DDB5BE7E9.jpeg" alt="Caption for 603337B9" onclick="openModal(this)" /><p class="caption">Caption for 603337B9</p></div>
-      <div class="gallery-item"><img src="IMG_7654.jpeg" alt="Caption for IMG_7654" onclick="openModal(this)" /><p class="caption">Caption for IMG_7654</p></div>
-      <div class="gallery-item"><img src="IMG_5737.jpeg" alt="Caption for IMG_5737" onclick="openModal(this)" /><p class="caption">Caption for IMG_5737</p></div>
-      <div class="gallery-item"><img src="IMG_6102.jpeg" alt="Caption for IMG_6102" onclick="openModal(this)" /><p class="caption">Caption for IMG_6102</p></div>
-      <div class="gallery-item"><img src="IMG_5455.jpeg" alt="Caption for IMG_5455" onclick="openModal(this)" /><p class="caption">Caption for IMG_5455</p></div>
-      <div class="gallery-item"><img src="DSC_0269_1_Original.jpeg" alt="Caption for DSC_0269" onclick="openModal(this)" /><p class="caption">Caption for DSC_0269</p></div>
-      <div class="gallery-item"><img src="IMG_6715.jpeg" alt="Caption for IMG_6715" onclick="openModal(this)" /><p class="caption">Caption for IMG_6715</p></div>
-      <div class="gallery-item"><img src="IMG_4464.jpeg" alt="Caption for IMG_4464" onclick="openModal(this)" /><p class="caption">Caption for IMG_4464</p></div>
-      <div class="gallery-item"><img src="IMG_3975.jpeg" alt="Caption for IMG_3975" onclick="openModal(this)" /><p class="caption">Caption for IMG_3975</p></div>
+      <div class="gallery-item"><img src="IMG_8514.jpeg" alt="Caption for IMG_8514" onclick="openModal(this)"><div class="overlay">Caption for IMG_8514</div></div>
+      <div class="gallery-item"><img src="IMG_7942.jpeg" alt="Caption for IMG_7942" onclick="openModal(this)"><div class="overlay">Caption for IMG_7942</div></div>
+      <div class="gallery-item"><img src="603337B9-E100-439B-8D44-C91DDB5BE7E9.jpeg" alt="Caption for 603337B9" onclick="openModal(this)"><div class="overlay">Caption for 603337B9</div></div>
+      <div class="gallery-item"><img src="IMG_7654.jpeg" alt="Caption for IMG_7654" onclick="openModal(this)"><div class="overlay">Caption for IMG_7654</div></div>
+      <div class="gallery-item"><img src="IMG_5737.jpeg" alt="Caption for IMG_5737" onclick="openModal(this)"><div class="overlay">Caption for IMG_5737</div></div>
+      <div class="gallery-item"><img src="IMG_6102.jpeg" alt="Caption for IMG_6102" onclick="openModal(this)"><div class="overlay">Caption for IMG_6102</div></div>
+      <div class="gallery-item"><img src="IMG_5455.jpeg" alt="Caption for IMG_5455" onclick="openModal(this)"><div class="overlay">Caption for IMG_5455</div></div>
+      <div class="gallery-item"><img src="DSC_0269_1_Original.jpeg" alt="Caption for DSC_0269" onclick="openModal(this)"><div class="overlay">Caption for DSC_0269</div></div>
+      <div class="gallery-item"><img src="IMG_6715.jpeg" alt="Caption for IMG_6715" onclick="openModal(this)"><div class="overlay">Caption for IMG_6715</div></div>
+      <div class="gallery-item"><img src="IMG_4464.jpeg" alt="Caption for IMG_4464" onclick="openModal(this)"><div class="overlay">Caption for IMG_4464</div></div>
+      <div class="gallery-item"><img src="IMG_3975.jpeg" alt="Caption for IMG_3975" onclick="openModal(this)"><div class="overlay">Caption for IMG_3975</div></div>
     </div>
   </section>
 
@@ -341,7 +322,6 @@
       var modal = document.getElementById("lightboxModal");
       var modalImg = document.getElementById("lightboxImg");
       var captionText = document.getElementById("lightboxCaption");
-
       modal.style.display = "block";
       modalImg.src = imgElement.src;
       captionText.innerHTML = imgElement.alt;
@@ -350,8 +330,8 @@
       document.getElementById("lightboxModal").style.display = "none";
     }
   </script>
-
 </body>
 </html>
+
 
 
